@@ -1,0 +1,35 @@
+<div fxFlex fxLayout="column">
+  <app-header [title]="title" [icon]="icon">
+  </app-header>
+
+  <mat-card fxFlex fxLayout="row" class="content-page-form" style="padding-bottom: 38px;">
+
+    <div fxFlex fxLayout="column" fxLayoutGap="10px">
+
+      <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px;">
+        <button color="primary" mat-stroked-button (click)="create(form.value.newToDo)">
+          <mat-icon>add</mat-icon>
+          <span>Criar Lembrete</span>
+        </button>
+
+        <app-input-text fxFlex="50" [formGroup]="form" [formcontrolname]="'newToDo'" [label]="'Novo Lembrete'"
+          [appearance]="'outline'">
+        </app-input-text>
+      </div>
+
+      <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="center" style="margin: 10px;">
+        <mat-card fxFlex fxLayout="row" fxLayoutAlign="space-between center"
+          *ngFor="let item of toDo; let index = index">
+          <div fxFlex>
+            {{ item?.descricao }}
+          </div>
+          <div fxFlex fxLayoutAlign="end">
+            <mat-icon class="icon-action" matTooltip="Excluír" (click)="delete(item)">delete_outline</mat-icon>
+          </div>
+        </mat-card>
+      </div>
+
+    </div>
+
+  </mat-card>
+</div>
