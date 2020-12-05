@@ -7,8 +7,8 @@ const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'calendario',
-        loadChildren: () => import('./calendar/calendar.module').then(m => m.CalendarModule)
+        path: 'categoria',
+        loadChildren: () => import('./category/category.module').then(m => m.CategoryModule)
       },
       {
         path: 'customizar',

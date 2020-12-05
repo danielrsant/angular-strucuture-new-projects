@@ -14,7 +14,7 @@ import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { dropdownAnimation } from 'src/app/shared/animations';
 
-import { NavigationService } from '../../../../services/navigation.service';
+import { NavigationService } from '../../../../shared/services/navigation.service';
 import { NavigationDropdown, NavigationItem, NavigationLink } from '../../../../shared/interfaces/navigation-item.interface';
 
 

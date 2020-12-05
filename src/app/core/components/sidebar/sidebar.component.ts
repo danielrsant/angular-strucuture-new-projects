@@ -4,7 +4,7 @@ import { Inject } from '@angular/core';
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { NavigationService } from 'src/app/services/navigation.service';
+import { NavigationService } from 'src/app/shared/services/navigation.service';
 import { StyleService } from 'src/app/shared/services/style.service';
 
 import { trackByRoute } from '../../../shared/utils/track-by';
